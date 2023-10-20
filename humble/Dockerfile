@@ -114,6 +114,7 @@ RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
     apt-get install -y \
     ros-${ROS_DISTRO}-gazebo-ros-pkgs \
     ros-${ROS_DISTRO}-ros-ign \
+    ros-humble-controller-manager \
     ros-humble-imu-tools \
     ros-humble-turtle-tf2-py ros-humble-tf2-tools ros-humble-tf-transformations \
     ros-humble-xacro \
