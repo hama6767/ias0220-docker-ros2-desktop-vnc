@@ -117,8 +117,7 @@ RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
     ros-humble-imu-tools \
     ros-humble-turtle-tf2-py ros-humble-tf2-tools ros-humble-tf-transformations \
     ros-humble-xacro \
-    ros-humble-rqt-tf-tree \
-    && \
+    ros-humble-rqt-tf-tree && \
     rm -rf /var/lib/apt/lists/*; \
     fi
 
