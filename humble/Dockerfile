@@ -113,7 +113,12 @@ RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
     apt-get update -q && \
     apt-get install -y \
     ros-${ROS_DISTRO}-gazebo-ros-pkgs \
-    ros-${ROS_DISTRO}-ros-ign && \
+    ros-${ROS_DISTRO}-ros-ign \
+    ros-humble-imu-tools \
+    ros-humble-turtle-tf2-py ros-humble-tf2-tools ros-humble-tf-transformations \
+    ros-humble-xacro \
+    ros-humble-rqt-tf-tree \
+    && \
     rm -rf /var/lib/apt/lists/*; \
     fi
 
