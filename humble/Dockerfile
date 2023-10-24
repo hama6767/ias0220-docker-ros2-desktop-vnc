@@ -118,9 +118,17 @@ RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
     ros-humble-imu-tools \
     ros-humble-turtle-tf2-py ros-humble-tf2-tools ros-humble-tf-transformations \
     ros-humble-xacro \
-    ros-humble-rqt-tf-tree && \
+    ros-humble-gazebo-ros2-control \
+    ros-humble-diff-drive-controller ros-humble-joint-state-broadcaster \   
+    ros-humble-joint-state-publisher-gui \
+    ros-humble-rqt-tf-tree ros-humble-plotjuggler ros-humble-plotjuggler-ros \
+    ros-humble-image-proc && \
     rm -rf /var/lib/apt/lists/*; \
     fi
+
+RUN pip install transforms3d # task4
+RUN pip install opencv-python # task5
+RUN pip install pyserial # task6
 
 COPY ./entrypoint.sh /
 ENTRYPOINT [ "/bin/bash", "-c", "/entrypoint.sh" ]
